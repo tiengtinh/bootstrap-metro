@@ -1,0 +1,13 @@
+.metro-nav {
+	font-family: 'Open Sans';
+}
+
+.metro-nav ul {
+	list-style: none;
+	margin: 0;
+	font-size: 23px;	
+}
+
+.metro-nav ul li {
+	padding: 10px 0;	
+}
