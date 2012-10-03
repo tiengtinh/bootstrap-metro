@@ -7,6 +7,7 @@
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">    
     <link href="css/bootstrap-responsive.css" rel="stylesheet">    
+    <link href="css/chosen.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">    
     
   </head>
@@ -65,6 +66,19 @@
                   </tr>
                 </tbody>        
               </table>
+
+              <select name="spec" data-placeholder="Your Favorite Type of Bear" style="width:350px;" class="chzn-select-deselect" tabindex="7">
+                <option value=""></option>
+                <option value="1" class="major">American Black Bear</option>
+                <option value="2" class="sub">Asiatic Black Bear</option>
+                <option value="3" class="sub">Brown Bear</option>
+                <option value="4" class="sub">Giant Panda</option>
+                <option value="5" class="major">Sloth Bear</option>
+                <option value="6" class="sub">Sun Bear</option>
+                <option value="7" class="sub">Polar Bear</option>
+                <option value="8" class="sub">Spectacled Bear</option>
+              </select>
+
             </div>
           </div>
         </div>
@@ -80,6 +94,18 @@
     </div>
 
     <script src="js/jquery.js"></script>    
-    <script src="js/bootstrap.min.js"></script>        
+    <script src="js/chosen.jquery.js"></script>    
+    <script src="js/bootstrap.min.js"></script>     
+    <script type="text/javascript">
+      $(function(){
+        $(".chzn-select-deselect").chosen({allow_single_deselect:true})
+          .change(function(e){
+            my = e;
+            var selected = $('select[name=spec] > option:selected').hasClass('major');
+            console.log(selected);
+          });
+      });
+      
+    </script>   
   </body>
 </html>

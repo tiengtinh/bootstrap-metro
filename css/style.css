@@ -85,3 +85,6 @@
 	margin: 0px;
 	font-size: 18px;	
 }
+
+.major {font-weight: bold;}
+.sub {margin-left: 20px !important;}	
