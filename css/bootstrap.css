@@ -971,7 +971,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  background-color: #D2D2D2; /*Long*/
+  background-color: #EFEFEF; /*Long*/
   border: 1px solid #1D1D1D; /*Long*/
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -998,14 +998,15 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-  border-color: rgba(82, 168, 236, 0.8);
+  border-color: #1D1D1D;
   outline: 0;
   outline: thin dotted \9;
+  background-color: #ffffff;
   /* IE6-9 */
 
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  /*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);*/
 }
 
 input[type="radio"],
@@ -1081,7 +1082,7 @@ input[type="checkbox"]:focus {
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #1D1D1D; /*Long*/
+  color: #999999; /*Long*/
 }
 
 input:-ms-input-placeholder,

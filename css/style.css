@@ -85,3 +85,71 @@
 	margin: 0px;
 	font-size: 18px;	
 }
+
+
+/*METRO CHECKBOX
+
+	*Checked checkbox:	
+    <label class="metro-check">
+      <input type="checkbox" checked="checked" name="cb1">
+        <span>Checked</span>
+    </label>
+
+
+    <label class="metro-check">
+       <input type="checkbox" name="cb2">
+      	<span>Unchecked</span>
+    </label>
+
+*/
+.metro-check {
+	cursor: pointer;
+    position: relative;
+}
+
+.metro-check input[type=checkbox] + span{
+	font: 13px/14px "Segoe UI",Sans-serif;
+}
+
+.metro-check input[type="checkbox"],
+.metro-check input[type="checkbox"] + span,
+.metro-check input[type="checkbox"] + span:before,
+.metro-check input[type="checkbox"] + span:after {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.metro-check input[type=checkbox]{
+	opacity: 0;
+    position: absolute;
+}
+
+.metro-check input[type="checkbox"] + span:before {
+	background: none repeat scroll 0 0 #000000;
+	font-weight: bolder;
+    content: "✔";
+    height: 22px;
+    margin-right: 10px;
+    text-indent: -9999px;
+    width: 22px;
+}
+
+.metro-check input[type="checkbox"] + span:after {
+	color: #FFFFFF;
+    content: "";
+    font-family: Tahoma;
+    font-size: 20px;
+    font-weight: bold;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    z-index: 1000;
+}
+
+.metro-check input[type="checkbox"]:checked + span:after {
+	content: "✓";
+	font-weight: bolder;
+}
+.metro-check:hover input[type=checkbox]+span::before{background:#666666;}
+.metro-check:hover input[type=checkbox]:checked+span::before{background:#666666;}
+/*/METRO CHECKBOX*/
