@@ -7,6 +7,7 @@
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">    
     <link href="css/bootstrap-responsive.css" rel="stylesheet">    
+    <link href="css/chosen.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">    
     
   </head>
@@ -36,10 +37,38 @@
                 <input type="password" id="inputPassword" placeholder="Password">
               </div>
             </div>
+
+            <div class="control-group">
+              <label class="control-label" for="bears">Bear</label>
+              <div class="controls">
+              <select id="bears" name="bears" data-placeholder="Your Favorite Type of Bear" style="width:350px;" class="chzn-select-deselect" tabindex="7">
+                  <option value=""></option>
+                  <option value="1" class="major">American Black Bear</option>
+                  <option value="2" class="sub">Asiatic Black Bear</option>
+                  <option value="3" class="sub">Brown Bear</option>
+                  <option value="4" class="sub">Giant Panda</option>
+                  <option value="5" class="major">Sloth Bear</option>
+                  <option value="6" class="sub">Sun Bear</option>
+                  <option value="7" class="sub">Polar Bear</option>
+                  <option value="8" class="sub">Spectacled Bear</option>
+                </select>
+                </div>
+            </div>
+            
+
             <div class="control-group">
               <div class="controls">
                 <label class="checkbox">
-                  <input type="checkbox" name="cb1"> Remember me
+                  <input type="checkbox" name="cb1"> 
+                  <span>Remember me</span>
+                </label>
+                <label class="metro-check">
+                  <input type="checkbox" checked="checked" name="cb1">
+                    <span>Checked</span>
+                  </label>
+                  <label class="metro-check">
+                    <input type="checkbox" name="cb2">
+                  <span>Unchecked</span>
                 </label>
                 <button type="submit" class="btn">Sign in</button>
               </div>
@@ -57,6 +86,18 @@
     </div>
 
     <script src="js/jquery.js"></script>    
-    <script src="js/bootstrap.min.js"></script>        
+    <script src="js/chosen.jquery.js"></script>    
+    <script src="js/bootstrap.min.js"></script>     
+    <script type="text/javascript">
+      $(function(){
+        $(".chzn-select-deselect").chosen({allow_single_deselect:true})
+          .change(function(e){
+            my = e;
+            var selected = $('select[name=spec] > option:selected').hasClass('major');
+            console.log(selected);
+          });
+      });
+      
+    </script>  
   </body>
 </html>
